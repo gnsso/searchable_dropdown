@@ -524,7 +524,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
           ? widget.selectedValueWidgetFn(widget.items[item].value)
           : items[item]);
     });
-    if (list.isEmpty && hintIndex != null) {
+    if (list.isEmpty || hintIndex != null) {
       innerItemsWidget = items[hintIndex];
     } else {
       innerItemsWidget = Column(
